@@ -109,18 +109,42 @@
 	</section>	
 
 	<section>
-	  <h2>Main Empirical Methods</h2>
+	  <section>
+	  <h2>State-Space Model</h2>
 	</section>
 
 
 	<section>
-	  <h3>State-Space Model</h3>
-	  
+
+	  <span class="fragment highlight-current-green"><p align="left">$$\Delta IntInc_{dt} = \alpha_{d,t} + \beta^{Inc}_{d,0, t} \Delta FedFunds_{t}$$</p>
+	    $$+ \beta^{Inc}_{d,1, t} \Delta FedFunds_{t-1} + \epsilon_{dt}$$</span>
+
+	  <p align="left">where coefficients take the form of a random walk:</p>
+
+	  <span class="fragment highlight-current-green">$$\alpha^{Inc}_{d,t} = \mu_1 + \gamma_1 \alpha^{Inc}_{d, t-1} + \nu_{1,t}$$ </span>
+
+	  <span class="fragment highlight-current-green">$$\beta^{Inc}_{d,0, t} = \mu_2 + \gamma_2 \beta^{Inc}_{d,0, t-1} + \nu_{2,t}$$ </span>
+
+	  <span class="fragment highlight-current-green">$$\beta^{Inc}_{d,1, t} = \mu_3 + \gamma_3 \beta^{Inc}_{d,1, t-1} + \nu_{3,t}$$ </span>
+	  </section>
+
+	<section>
+$$\epsilon_t \sim i.i.d. N(0, R)$$
+
+$$\nu_t \sim i.i.d. N(0, Q)$$
+
+$$E(\epsilon_t, \nu'_t) = 0$$
+	</section>
+
+	<section>
+and $\Delta IntInc_{dt}$ is the quarterly change interest income for decile $d$ at time $t$ and $\Delta FedFunds_t$ is the quarterly change in the Federal Funds rate at time $t$.  $\beta^{Inc}_{d,0,t}$ is the time-varying coefficient on the contemporaneous Federal Funds rate change for decile $d$ at time $t$, and $\beta^{Inc}_{d,1,t}$ is the coefficient on the Federal Funds rate change lagged one quarter.
+
+	</section>
 	</section>
 
 <section>
   <h3>Conditional Volatility</h3>
-  <span class="fragment highlight-current-green"> $H_{t|t-1} = x_{t-1}P_{t|t-1}x'_{t-1}$</span>
+  <span class="fragment highlight-current-red"> $H_{t|t-1} = x_{t-1}P_{t|t-1}x'_{t-1}$</span>
   <p align="left">where:</p>
   <ul>
     <li>$x_{t-1}$ is the vector is the Fed Funds rate and its lag at time <i>t-1</i></li>
