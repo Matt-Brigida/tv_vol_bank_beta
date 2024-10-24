@@ -110,49 +110,56 @@
 
 	<section>
 	  <section>
-	  <h2>State-Space Model</h2>
-	</section>
-
-
-	<section>
-
-	  <span class="fragment highlight-current-green"><p align="left">$$\Delta IntInc_{dt} = \alpha_{d,t} + \beta^{Inc}_{d,0, t} \Delta FedFunds_{t}$$</p>
-	    $$+ \beta^{Inc}_{d,1, t} \Delta FedFunds_{t-1} + \epsilon_{dt}$$</span>
-
-	  <p align="left">where coefficients take the form of a random walk:</p>
-
-	  <span class="fragment highlight-current-green">$$\alpha^{Inc}_{d,t} = \mu_1 + \gamma_1 \alpha^{Inc}_{d, t-1} + \nu_{1,t}$$ </span>
-
-	  <span class="fragment highlight-current-green">$$\beta^{Inc}_{d,0, t} = \mu_2 + \gamma_2 \beta^{Inc}_{d,0, t-1} + \nu_{2,t}$$ </span>
-
-	  <span class="fragment highlight-current-green">$$\beta^{Inc}_{d,1, t} = \mu_3 + \gamma_3 \beta^{Inc}_{d,1, t-1} + \nu_{3,t}$$ </span>
+	    <h2>State-Space Model</h2>
 	  </section>
 
-	<section>
-$$\epsilon_t \sim i.i.d. N(0, R)$$
+	  <section>
+	    <h3>Kim and Nelson (1999)</h3>	    
+	    <p align="left">"One nice thing about the Kalman Filter is that it gives us insight into how <span class="fragment highlight-current-green">a rational economic agent would revise his estimates of the coefficients in a Bayesian fashion when new information is available in a world of uncertainty</span>, <span class="fragment highlight-current-green">especially under a changing policy regime</span>"</p>
+	  </section>
 
-$$\nu_t \sim i.i.d. N(0, Q)$$
+	  <section>
+	    <span class="fragment highlight-current-green"><p align="left">$$\Delta IntInc_{dt} = \alpha_{d,t} + \beta^{Inc}_{d,0, t} \Delta FedFunds_{t}$$</p>
+	      $$+ \beta^{Inc}_{d,1, t} \Delta FedFunds_{t-1} + \epsilon_{dt}$$</span>
 
-$$E(\epsilon_t, \nu'_t) = 0$$
+	    <p align="left">where coefficients take the form of a random walk:</p>
+
+	    <span class="fragment highlight-current-green">$$\alpha^{Inc}_{d,t} = \mu_1 + \gamma_1 \alpha^{Inc}_{d, t-1} + \nu_{1,t}$$ </span>
+
+	    <span class="fragment highlight-current-green">$$\beta^{Inc}_{d,0, t} = \mu_2 + \gamma_2 \beta^{Inc}_{d,0, t-1} + \nu_{2,t}$$ </span>
+
+	    <span class="fragment highlight-current-green">$$\beta^{Inc}_{d,1, t} = \mu_3 + \gamma_3 \beta^{Inc}_{d,1, t-1} + \nu_{3,t}$$ </span>
+	  </section>
+
+	  <section>
+	    $$\epsilon_t \sim i.i.d. N(0, R)$$
+
+	    $$\nu_t \sim i.i.d. N(0, Q)$$
+
+	    $$E(\epsilon_t, \nu'_t) = 0$$
+	  </section>
+
+	  <section>
+	    <ul>
+	      <li>$\Delta IntInc_{dt}$ is the quarterly change interest income for decile $d$ at time $t$</li>
+	      <li>$\Delta FedFunds_t$ is the quarterly change in the Federal Funds rate at time $t$</li>
+	      <li>$\beta^{Inc}_{d,0,t}$ is the time-varying coefficient on the contemporaneous Federal Funds rate change for decile $d$ at time $t$</li>
+	      <li>$\beta^{Inc}_{d,1,t}$ is the coefficient on the Federal Funds rate change lagged one quarter.</li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h3>Conditional Variance</h3>
+	    <span class="fragment highlight-current-red"> $H_{t|t-1} = x_{t-1}P_{t|t-1}x'_{t-1} + \sigma^2_{\epsilon}$</span>
+	    <p align="left">where:</p>
+	    <ul>
+	      <li class="fragment highlight-current-blue">$x_{t-1}$ is the vector is the Fed Funds rate and its lag at time <i>t-1</i></li>
+	      <li class="fragment highlight-current-blue">$P_{t|t-1}$ covariance matrix of $\beta_t$ conditional on information up to $t-1$. This is the degree of uncertainty associated with the inference on $\beta_t$ at time $t-1$.</li>
+	    </ul>
+	  </section>
 	</section>
 
-	<section>
-and $\Delta IntInc_{dt}$ is the quarterly change interest income for decile $d$ at time $t$ and $\Delta FedFunds_t$ is the quarterly change in the Federal Funds rate at time $t$.  $\beta^{Inc}_{d,0,t}$ is the time-varying coefficient on the contemporaneous Federal Funds rate change for decile $d$ at time $t$, and $\beta^{Inc}_{d,1,t}$ is the coefficient on the Federal Funds rate change lagged one quarter.
-
-	</section>
-	</section>
-
-<section>
-  <h3>Conditional Volatility</h3>
-  <span class="fragment highlight-current-red"> $H_{t|t-1} = x_{t-1}P_{t|t-1}x'_{t-1}$</span>
-  <p align="left">where:</p>
-  <ul>
-    <li>$x_{t-1}$ is the vector is the Fed Funds rate and its lag at time <i>t-1</i></li>
-    <li></li>
-    <li></li>
-  </ul>
-</section>
-
+	
 	<section>
 	  <h2>Results</h2>
 	</section>
@@ -227,14 +234,65 @@ and $\Delta IntInc_{dt}$ is the quarterly change interest income for decile $d$ 
 	  <h3>Constant Coefficient Regression</h3>
 	</section>
 
-  <section>
-    <h3>Future Research</h3>
-    <ul>
-      <li class="fragment highlight-current-blue">Beta and Volatility by Bank Operational Focus</li>
-      <li class="fragment highlight-current-blue">Volaility Pricing at Bank Level</li>
-      <li></li>
-    </ul>
-  </section>
+	<section>
+	  <section>
+	    <h2>Future Research</h2>
+	  </section>
+
+	  <section>
+	    <h3>Beta and Volatility by Bank Operational Focus</h3>
+	    <blockquote style="maxHeight:400px overflow:scroll" >
+	 SPECGRP:
+        title: Asset Concentration Hierarchy
+        description: 
+          An indicator of an institution's primary specialization in terms of
+              asset concentration
+
+	                        if (ctx.SPECGRP == 0) {
+                    ctx.SPECGRPN = 'No Specialization Group';
+                  } 
+                  else if (ctx.SPECGRP == 1) {
+                    ctx.SPECGRPN = 'International Specialization';
+                  } 
+                  else if (ctx.SPECGRP == 2) {
+                    ctx.SPECGRPN = 'Agricultural Specialization';
+                  } 
+                  else if (ctx.SPECGRP == 3) {
+                    ctx.SPECGRPN = 'Credit-card Specialization';
+                  } 
+                  else if (ctx.SPECGRP == 4) {
+                    ctx.SPECGRPN = 'Commercial Lending Specialization';
+                  } 
+                  else if (ctx.SPECGRP == 5) {
+                    ctx.SPECGRPN = 'Mortgage Lending Specialization';
+                  } 
+                  else if (ctx.SPECGRP == 6) {
+                    ctx.SPECGRPN = 'Consumer Lending Specialization';
+                  } 
+                  else if (ctx.SPECGRP == 7) {
+                    ctx.SPECGRPN = 'Other Specialized Under 1 Billion';
+                  } 
+                  else if (ctx.SPECGRP == 8) {
+                    ctx.SPECGRPN = 'All Other Under 1 Billion';
+                  } 
+                  else if (ctx.SPECGRP == 9) {
+                    ctx.SPECGRPN = 'All Other Over 1 Billion';
+                  } 
+                  else  {
+                    ctx.SPECGRPN = 'Error in Specialization Group';
+                  }
+	    </blockquote>
+	  </section>
+
+	  <section>
+	    <h3>Volatility Pricing at Bank Level</h3>
+	    <ul>
+	      <li>Show market participants price </li>
+	      <li></li>
+	    </ul>
+	  </section>
+	</section>
+
 	
 <!-- Insert App -->
 <!-- <section data-background-image="./code_image.jpg"> -->
