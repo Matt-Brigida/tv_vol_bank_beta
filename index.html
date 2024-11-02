@@ -246,11 +246,31 @@
 	  <h3>Market Pricing of Beta Volatility</h3>
 	</section>
 
-
 	  <section>
+	    <ul>
+	      <li>Estimate an index model including time-varying volatility estimates</li>
+	      <li>Dependent variable is $XLF$</li>
+	      <li>Quarterly data from Q1 1999 to Q1 2024</li>
+	    </ul>
 	  </section>
 
 	  <section>
+	    <h3>Pricing Equation</h3>
+$$\begin{equation}
+r_{XLF, t} = \gamma_0 + \gamma_1 \Delta CV_{Exp, t} + \gamma_2 \Delta CV_{Inc, t} + \gamma_3 r_{M, t} + \xi_t
+\end{equation}$$
+	  </section>
+
+	  <section>
+	    <iframe frameborder="0" src="./tables/pricing_vol/table_prigin_vol.pdf" width="700" height="800"></iframe>
+	  </section>
+
+	  <section>
+	    <h3>Implications</h3>
+	    <ul>
+	      <li>One standard deviation increase in uncertainty $\Rightarrow$ <span class="fragment highlight-current-red">2.34% decline in stock values</span></li>
+	      <li>This lowers the largest bank stocks by about <span class="fragment highlight-current-red">\$47 billion</span></li>
+	    </ul>
 	  </section>
 
 	</section>
