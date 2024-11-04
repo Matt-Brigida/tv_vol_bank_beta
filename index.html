@@ -52,6 +52,60 @@
 	</section>
 
 	<section>
+	<section>
+	  <h3>Previous Research: Drechsler et al (2021)</h3>
+
+	  <ul>
+	    <li class="fragment highlight-current-blue">Banks hedge interest rate risk by matching the sensitivities of interest income and expense to the short rate</li>
+	    <li class="fragment highlight-current-blue">Net interest margins are insensitive to interest rate changes</li>
+	    <li class="fragment highlight-current-blue">Key is the /deposit franchise/ which acts like long-term debt rather than the short rate</li>
+	    <li class="fragment highlight-current-blue">deposit franchise, maturity transformation does not cause interest rate risk</li>
+	  </ul>.  
+	</section>
+
+	<section>
+	  <ul>
+	    <li class="fragment highlight-current-blue">Estimate static interest income and expense beta coefficients over their entire sample (1984 to 2017).</li>
+	    <li class="fragment highlight-current-blue">We should expect substantial variation in interest income betas given the sensitivity of duration to the coupon rate and yield</li>
+	    <li class="fragment highlight-current-blue">Are able to match interest income and expense betas at each quarter?</li>
+	    <li class="fragment highlight-current-blue">Measure a bank's uncertainty about whether they will be matched</li>
+	    <li class="fragment highlight-current-blue">This uncertainty is a yet unmeasured source of bank risk</li>
+	  </ul>
+	</section>
+	</section>
+
+	<section>
+	  <section>
+	  <h2>Hypothesis and Goals</h2>
+	</section>
+	  <section>
+	    <ul>
+	      <li class="fragment highlight-current-blue">Banks forecast future interest income and expense betas and then adjust their balance sheet to attempt to lessen any difference</li>
+	      <li class="fragment highlight-current-blue">Banks reforecast betas and adjust their balance sheet in a continual dynamic matching strategy</li>
+	      <li class="fragment highlight-current-blue">A natural model of this process is the Kalman filter</li>
+	      <li class="fragment highlight-current-blue">models a rational Bayesian market participant which updates forecasts of estimated coefficients as new information arrives</li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <ul>
+	      <li class="fragment highlight-current-blue">Measure the uncertainty of this process</li>
+	      <li class="fragment highlight-current-blue">Test if the market prices this uncertainty</li>
+	    </ul>
+	  </section>
+	</section>
+
+
+	<section>
+	  <h3>Data</h3>
+	  <ul>
+	    <li class="fragment highlight-current-blue">Built from a database of FDIC Call reports and ranges from October 1992 to June 2024</li>
+	    <li class="fragment highlight-current-blue">Total interest income to assets (FDIC BankFind code:  /INTINCY/), expense to assets (/EINTEXP/[fn:1]), and assets for each bank over each quarter</li>
+	    <li class="fragment highlight-current-blue">Aggregate into deciles to control for bank size</li>
+	  </ul>
+	</section>
+
+	<section>
 	  <h2>Empirical Methods</h2>
 	</section>
 
